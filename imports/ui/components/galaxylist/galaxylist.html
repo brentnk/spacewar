@@ -1,0 +1,6 @@
+<template name="galaxylist">
+  <h2>List of galaxies</h2>
+  {{#each galaxies}}
+    <div><span>{{name}}</span> - {{#each planets}} {{name}} {{/each}} </div>
+  {{/each}}
+</template>
