@@ -1,8 +1,22 @@
 <template name="gamenav">
+
   <div class="row">
 
     <div class="game-card card-panel blue-grey lighten-3">
-      
+      <div class="container">
+
+      <h5 class="center-align">things</h5>
+
+
+
+      {{#each links}}
+        <div class="buildings card-panel col s2">{{name}} {{level}}</div>
+      {{/each}}
+
+
+
+  </div>
+
     </div>
 
 
