@@ -1,0 +1,25 @@
+<template name="planetlist">
+  <h2>List of All Planets</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>GalaxyId</th>
+            <th>OwnerId</th>
+            <td>Metal</td>
+            <td>Crystal</td>
+            <td>Deuterium</td>
+        </tr>
+        {{#each planets}}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{galaxyId}}</td>
+                <td>{{ownerId}}</td>
+                <td>{{metal}}</td>
+                <td>{{crystal}}</td>
+                <td>{{deuterium}}</td>
+            </tr>
+        {{/each}}
+
+    </table>
+
+</template>

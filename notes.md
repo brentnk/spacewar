@@ -1,16 +1,18 @@
-game:
-  galaxy:
-    planet:
-      id
-      fields
-      name
-      owner
-      position
-      galaxyId
-      crystal
-      metal
-      deuterium
-      power
+game
+ - galaxy:
+   - name
+   - id
+   - planet:
+      - id
+      - fields
+      - name
+      - ownerId
+      - position
+      - galaxyId
+      - crystal
+      - metal
+      - deuterium
+      - power
 
 initial game
  
