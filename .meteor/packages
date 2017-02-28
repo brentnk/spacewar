@@ -29,3 +29,5 @@ accounts-password
 aldeed:collection2-core@2.0.0
 random
 dburles:collection-helpers
+dsyko:holder
+useraccounts:unstyled

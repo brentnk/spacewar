@@ -4,5 +4,7 @@
 import { Planets } from '../../api/planets/planets.js';
 
 Meteor.setInterval(function(){
-  Planets.update({ownerId: {$ne:-1}}, {$inc: {metal: 5, crystal: 3, deuterium: 1}});
-}, 5000);
+  Planets.update({ownerId: {$ne:-1}}, 
+                 {$inc: {metal: 5, crystal: 3, deuterium: 1}},
+                 {multi: true});
+}, 1000);

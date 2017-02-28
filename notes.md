@@ -13,6 +13,15 @@ game
       - metal
       - deuterium
       - power
+      - buildings:
+        - buildings
+        - buildings
+        - buildings
+        - buildings
+        - buildings
+        - buildings
+        - buildings
+        - buildings
 
 initial game
  

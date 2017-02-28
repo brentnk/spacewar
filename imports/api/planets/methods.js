@@ -21,4 +21,19 @@ Meteor.methods({
       createdAt: new Date(),
     });
   },
+  'planets.claimByPlayer'(id) {
+    check(id, String)
+
+    let planet = Planets.findOne({_id: id});
+
+    if(!!planet === false) {
+      throw "Planet not found";
+    }
+
+    if(planet.ownerId !== -1) {
+      throw "Planet owned by someone!";
+    }
+
+    return Planets.update({_id: id}, {$set: {ownerId: this.userId}});
+  },
 });
