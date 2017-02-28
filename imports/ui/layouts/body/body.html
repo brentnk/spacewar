@@ -1,3 +1,17 @@
 <template name="App_body">
-  {{> Template.dynamic template=main}}
+  <div class="columns">
+    <div class="column">
+      <div class="nav">
+        {{> mynav}}
+      </div>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column is-2 left-nav">
+      {{> leftnav}}
+    </div>
+    <div class="column main-content">
+      {{> Template.dynamic template=main}}
+    </div>
+  </div>
 </template>

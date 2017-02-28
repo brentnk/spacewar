@@ -1,18 +1,24 @@
 <template name="planetlist">
   <h2>List of All Planets</h2>
-    <table>
+    <table class="table">
         <tr>
+            <th></th>
+            <th>Claim</th>
             <th>Name</th>
             <th>GalaxyId</th>
+            <th>Position</th>
             <th>OwnerId</th>
-            <td>Metal</td>
-            <td>Crystal</td>
-            <td>Deuterium</td>
+            <th>Metal</th>
+            <th>Crystal</th>
+            <th>Deuterium</th>
         </tr>
         {{#each planets}}
-            <tr>
+            <tr class={{#if amOwner ownerId}}mine{{else}}notmine{{/if}} >
+                <td> <img src="holder.js/36x36" alt="Planet picture placeholder"> </td>
+                <td> <a class='planetclaim' planetid={{_id}}>Claim Planet</a> </td>
                 <td>{{name}}</td>
                 <td>{{galaxyId}}</td>
+                <td>{{position}}</td>
                 <td>{{ownerId}}</td>
                 <td>{{metal}}</td>
                 <td>{{crystal}}</td>
