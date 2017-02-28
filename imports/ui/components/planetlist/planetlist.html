@@ -1,8 +1,9 @@
 <template name="planetlist">
-  <h2>List of All Planets</h2>
+    <h2>List of All Planets</h2>
     <table class="table">
         <tr>
             <th></th>
+            <th>Upgrading</th>
             <th>Claim</th>
             <th>Name</th>
             <th>GalaxyId</th>
@@ -14,12 +15,17 @@
         </tr>
         {{#each planets}}
             <tr class={{#if amOwner ownerId}}mine{{else}}notmine{{/if}} >
-                <td> <img src="holder.js/36x36" alt="Planet picture placeholder"> </td>
-                <td> <a class='planetclaim' planetid={{_id}}>Claim Planet</a> </td>
+                <td>
+                    <figure class="image is-128x128">
+                        <img src="http://bulma.io/images/placeholders/128x128.png">
+                    </figure>
+                </td>
+                <td>{{#let e=(isUpgrading _id)}}{{ getFromNow e.triggerAt }}{{/let}}</td>
+                <td><a class='planetclaim' planetid={{_id}}>Claim</a></td>
                 <td>{{name}}</td>
                 <td>{{galaxyId}}</td>
                 <td>{{position}}</td>
-                <td>{{ownerId}}</td>
+                <td> <div>{{ownerId}}</div> <div>{{_id}}</div> </td>
                 <td>{{metal}}</td>
                 <td>{{crystal}}</td>
                 <td>{{deuterium}}</td>
