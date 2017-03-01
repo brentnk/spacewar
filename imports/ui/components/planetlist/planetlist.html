@@ -20,7 +20,7 @@
                         <img src="http://bulma.io/images/placeholders/128x128.png">
                     </figure>
                 </td>
-                <td>{{#let e=(isUpgrading _id)}}{{ getFromNow e.triggerAt }}{{/let}}</td>
+                <td>{{#let e=(isUpgrading _id)}}<div>{{ getFromNow e.triggerAt }}</div>{{/let}}</td>
                 <td><a class='planetclaim' planetid={{_id}}>Claim</a></td>
                 <td>{{name}}</td>
                 <td>{{galaxyId}}</td>
